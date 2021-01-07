@@ -3,6 +3,8 @@ import helmet from "helmet";
 
 const app = express();
 
+app.set("trust proxy", true);
+
 app.use(helmet());
 
 app.use(express.static("public"));
