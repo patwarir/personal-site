@@ -13,7 +13,7 @@ jobs:
     steps:
       - name: Create Key File
         run: |
-          'echo "$SSH_PRIVATE_KEY" | base64 --decode > deployment.key'
+          'echo "$SSH_PRIVATE_KEY" > deployment.key'
           'chmod 400 deployment.key'
         shell: bash
         env:
