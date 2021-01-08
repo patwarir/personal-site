@@ -1,0 +1,11 @@
+{
+  "apps": [
+    {
+      "name": "personal-site",
+      "cwd": "./src/home",
+      "script": "npm",
+      "args": "start",
+      "max_memory_restart": "100M"
+    }
+  ]
+}
