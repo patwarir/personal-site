@@ -1,0 +1,26 @@
+name: Deploy to AWS Lightsail via SSH
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Create Key File
+        run: |
+          'echo "$SSH_PRIVATE_KEY" | base64 --decode > deployment.key'
+          'chmod 400 deployment.key'
+        shell: bash
+        env:
+          SSH_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+
+      - name: Update Server
+        run: ssh -i deployment.key $SERVER_URL "$SERVER_UPDATE_SCRIPT_PATH"
+        env:
+          SERVER_URL: ${{ secrets.SERVER_URL }}
+          SERVER_UPDATE_SCRIPT_PATH: ${{ secrets.SERVER_UPDATE_SCRIPT_PATH }}
