@@ -11,10 +11,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - uses: actions/checkout@v2
+
       - name: Create Key File
         run: |
-          'echo "$SSH_PRIVATE_KEY" > deployment.key'
-          'chmod 400 deployment.key'
+          echo "$SSH_PRIVATE_KEY" >deployment.key
+          chmod 400 deployment.key
         shell: bash
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
