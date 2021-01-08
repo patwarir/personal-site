@@ -1,3 +1,7 @@
+echo "Pulling..."
+git pull
+
+echo "Stopping server..."
 pm2 delete pm2.config.json
 
 echo "Building..."
