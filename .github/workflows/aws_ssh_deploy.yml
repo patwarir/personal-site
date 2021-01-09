@@ -15,14 +15,14 @@ jobs:
 
       - name: Create Key File
         run: |
-          echo "$SSH_PRIVATE_KEY" >deployment.key
+          echo "$SSH_PRIVATE_KEY" | base64 --decode >deployment.key
           chmod 400 deployment.key
         shell: bash
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
 
       - name: Update Server
-        run: ssh -i deployment.key $SERVER_URL "$SERVER_UPDATE_SCRIPT_PATH"
+        run: ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -i deployment.key $SERVER_URL "$SERVER_UPDATE_SCRIPT_PATH"
         env:
           SERVER_URL: ${{ secrets.SERVER_URL }}
           SERVER_UPDATE_SCRIPT_PATH: ${{ secrets.SERVER_UPDATE_SCRIPT_PATH }}
