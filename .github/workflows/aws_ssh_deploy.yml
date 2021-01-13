@@ -22,7 +22,7 @@ jobs:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
 
       - name: Update Server
-        run: ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -i deployment.key $SERVER_URL "$SERVER_UPDATE_SCRIPT_PATH"
+        run: ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -i deployment.key $SERVER_URL "/usr/bin/bash -ic $SERVER_UPDATE_SCRIPT_PATH"
         env:
           SERVER_URL: ${{ secrets.SERVER_URL }}
           SERVER_UPDATE_SCRIPT_PATH: ${{ secrets.SERVER_UPDATE_SCRIPT_PATH }}
