@@ -1,0 +1,68 @@
+{
+  "name": "rajat_patwari-personal-site",
+  "version": "1.0.0",
+  "description": "The personal website of Rajat Patwari",
+  "private": true,
+  "repository": "github:patwarir/personal-site",
+  "author": {
+    "name": "Rajat Patwari",
+    "url": "https://rajatpatwari.com"
+  },
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/patwarir/personal-site/issues"
+  },
+  "scripts": {
+    "react:start": "react-scripts start",
+    "react:build": "react-scripts build",
+    "server:start": "node ./server/index.js",
+    "start": "rimraf ./build/ && npm run react:build && npm run server:start"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.35",
+    "@fortawesome/free-brands-svg-icons": "^5.15.3",
+    "@fortawesome/free-solid-svg-icons": "^5.15.3",
+    "@fortawesome/react-fontawesome": "^0.1.14",
+    "bootstrap": "^5.0.2",
+    "express": "^4.17.1",
+    "helmet": "^4.6.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-helmet": "^6.1.0",
+    "react-router-dom": "^5.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.11",
+    "@types/react-dom": "^17.0.8",
+    "@types/react-helmet": "^6.1.1",
+    "@types/react-router-dom": "^5.1.7",
+    "react-scripts": "^4.0.3",
+    "rimraf": "^3.0.2",
+    "sass": "^1.35.1",
+    "typescript": "^4.3.4"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ],
+    "rules": {
+      "semi": [
+        2,
+        "always"
+      ]
+    }
+  },
+  "browserslist": {
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ],
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ]
+  }
+}
