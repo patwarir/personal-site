@@ -15,8 +15,8 @@
   "scripts": {
     "react:start": "react-scripts start",
     "react:build": "react-scripts build",
-    "server:start": "node ./server/index.js",
-    "start": "rimraf ./build/ && npm run react:build && npm run server:start"
+    "server:start": "tsc ./server/index.ts --target es6 --module commonjs --moduleResolution node --esModuleInterop && mkdirp ./release/ && mv ./server/index.js ./release/ && node ./release/index.js",
+    "start": "rimraf ./build/ && npm run react:build && rimraf ./release/ && npm run server:start"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
@@ -32,10 +32,14 @@
     "react-router-dom": "^5.2.0"
   },
   "devDependencies": {
+    "@types/express": "^4.17.12",
+    "@types/node": "^10.17.60",
     "@types/react": "^17.0.11",
     "@types/react-dom": "^17.0.8",
     "@types/react-helmet": "^6.1.1",
     "@types/react-router-dom": "^5.1.7",
+    "mkdirp": "^1.0.4",
+    "mv": "^2.1.1",
     "react-scripts": "^4.0.3",
     "rimraf": "^3.0.2",
     "sass": "^1.35.1",
