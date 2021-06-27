@@ -1,13 +1,17 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-import "./index.scss";
+import { ThemeProvider } from "ps-theme";
 
-import App from "./App";
+import App from "views/App";
+
+import "./index.scss";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ThemeProvider theme="light">
+      <App />
+    </ThemeProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );

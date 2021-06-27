@@ -11,3 +11,8 @@ footer, code {
 body {
   font-family: Georgia, "Times New Roman", Times, serif;
 }
+
+html, body, #root {
+  margin: 0px;
+  height: 100%;
+}
