@@ -26,6 +26,7 @@ const Routes: FunctionComponent = () => {
 
 const App: FunctionComponent = () => {
   const themeContext = useContext(ThemeContext);
+
   return (
     <div className={styles["app-container"]}>
       <Router>

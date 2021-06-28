@@ -1,5 +1,5 @@
 import { FunctionComponent, useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faCode, faLayerGroup, faMoon, faRss, faSun, faTimes, IconDefinition } from "@fortawesome/free-solid-svg-icons";
 
@@ -38,10 +38,12 @@ const NavbarThemeToggler: FunctionComponent = () => {
 };
 
 const NavbarItems: FunctionComponent = () => {
+  const location = useLocation();
+
   return (
     <ul className="navbar-nav ms-auto">
       <li className="nav-item">
-        <Link to="/blog" className="nav-link">
+        <Link to="/blog" className={"nav-link" + (location.pathname.startsWith("/blog") ? " active" : "")}>
           <FontAwesomeIcon fixedWidth icon={faRss} /> Blog
         </Link>
       </li>

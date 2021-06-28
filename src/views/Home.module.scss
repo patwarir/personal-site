@@ -1,0 +1,12 @@
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+
+.profile-btn-light {
+  color: $light !important;
+  background-color: $blue-700 !important;
+}
+
+.profile-btn-dark {
+  color: $light !important;
+  background-color: $dark !important;
+}
