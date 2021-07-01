@@ -1,7 +1,7 @@
 import { FunctionComponent, useContext, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faCode, faLayerGroup, faMoon, faRss, faSun, faTimes, IconDefinition } from "@fortawesome/free-solid-svg-icons";
+import { faBars, faBlog, faCode, faFileAlt, faLayerGroup, faMoon, faSun, faTimes, IconDefinition } from "@fortawesome/free-solid-svg-icons";
 
 import { ThemeContext } from "ps-theme";
 
@@ -44,7 +44,7 @@ const NavbarItems: FunctionComponent = () => {
     <ul className="navbar-nav ms-auto">
       <li className="nav-item">
         <Link to="/blog" className={"nav-link" + (location.pathname.startsWith("/blog") ? " active" : "")}>
-          <FontAwesomeIcon fixedWidth icon={faRss} /> Blog
+          <FontAwesomeIcon fixedWidth icon={faBlog} /> Blog
         </Link>
       </li>
       <li className="nav-item">
@@ -55,6 +55,11 @@ const NavbarItems: FunctionComponent = () => {
       <li className="nav-item">
         <Link to="/wundu" className="nav-link">
           <FontAwesomeIcon fixedWidth icon={faLayerGroup} /> Wundu
+        </Link>
+      </li>
+      <li className="nav-item">
+        <Link to="/resume" className="nav-link">
+          <FontAwesomeIcon fixedWidth icon={faFileAlt} /> Resume
         </Link>
       </li>
     </ul>

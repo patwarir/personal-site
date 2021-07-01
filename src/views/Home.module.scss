@@ -1,12 +1,16 @@
 @import "bootstrap/scss/functions";
 @import "bootstrap/scss/variables";
 
-.profile-btn-light {
+%profile-btn-shared {
   color: $light !important;
+}
+
+.profile-btn-light {
+  @extend %profile-btn-shared;
   background-color: $blue-700 !important;
 }
 
 .profile-btn-dark {
-  color: $light !important;
+  @extend %profile-btn-shared;
   background-color: $dark !important;
 }

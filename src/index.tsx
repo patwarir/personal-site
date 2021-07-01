@@ -9,7 +9,7 @@ import "./index.scss";
 
 ReactDOM.render(
   <React.StrictMode>
-    <ThemeProvider theme="light">
+    <ThemeProvider>
       <App />
     </ThemeProvider>
   </React.StrictMode>,
