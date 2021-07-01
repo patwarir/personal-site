@@ -68,6 +68,7 @@ const HistoryTimeline: FunctionComponent = () => {
           <span className="small text-muted">Frontend</span> <Badges items={[ "ReactJS", "ReduxJS", "SCSS/SASS", "Bootstrap", "Axios" ]} />
 
           <div className="mb-2"></div>
+
           The classic UNO!<span className="trademark">TM</span> card game - but now with configurability!
         </div>
       </Item>
@@ -81,6 +82,7 @@ const HistoryTimeline: FunctionComponent = () => {
           <span className="small text-muted">Frontend</span> <Badges items={[ "ExtJS/Sencha", "JavaScript" ]} />
 
           <div className="mb-2"></div>
+
           <p className="mb-0">Worked on enhancing existing features in the ExtJS/Sencha UI and ASP.NET API layers</p>
           <p className="mb-0">Created new features/endpoints in the brand new NestJS-Express API layer</p>
           <p className="mb-0">Performed bugfixes on existing layers and in SQL Stored Procedures</p>
@@ -100,8 +102,8 @@ const HistoryTimeline: FunctionComponent = () => {
           <span className="small text-muted">Online</span> <Badges items={[ "AWS", "Docker", "NodeJS", "NestJS-Express" ]} />
 
           <div className="mb-2"></div>
-          A new extensible assembly-like programming language that
-          runs in a virtual machine.
+
+          A new extensible assembly-like programming language that runs in a virtual machine.
         </div>
       </Item>
       <Item direction="left" icon={faBorderAll} iconAligment="align-top-top">
@@ -111,8 +113,8 @@ const HistoryTimeline: FunctionComponent = () => {
           <span className="small text-muted">Core</span> <Badges items={[ "WPF", "C#", ".NET Framework" ]} />
 
           <div className="mb-2"></div>
-          A replica of the CollegeBoard<span className="trademark">TM</span> case study completely
-          rewritten in idiomatic WPF/C#.
+
+          A replica of the CollegeBoard<span className="trademark">TM</span> case study completely rewritten in idiomatic WPF/C#.
         </div>
       </Item>
     </div>

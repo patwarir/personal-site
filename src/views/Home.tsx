@@ -5,12 +5,20 @@ import { faGithub, faGitlab, faLinkedin } from "@fortawesome/free-brands-svg-ico
 
 import { ThemeContext } from "ps-theme";
 
-import Title from "views/sectioning/Title";
-import Section from "views/sectioning/Section";
-
 import HistoryTimeline from "views/utils/HistoryTimeline";
 
 import styles from "./Home.module.scss";
+
+const Section: FunctionComponent<{ title: string }> = (props) => {
+  return (
+    <section className="mb-4">
+      <header>
+        <h2 className="display-6 text-decoration-underline mb-0">{props.title}</h2>
+      </header>
+      {props.children}
+    </section>
+  );
+};
 
 const ProfileButton: FunctionComponent<{ title: string, link: string, icon: IconDefinition }> = (props) => {
   const themeContext = useContext(ThemeContext);
@@ -27,7 +35,11 @@ const ProfileButton: FunctionComponent<{ title: string, link: string, icon: Icon
 const Home: FunctionComponent = () => {
   return (
     <Fragment>
-      <Title title="Hi There!" />
+      <header>
+        <div className="text-center mb-2">
+          <h1 className="display-1 font-weight-bold mb-0">Hi There!</h1>
+        </div>
+      </header>
       <main>
         <Section title="About Me">
           <p className="mb-0">

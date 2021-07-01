@@ -19,6 +19,7 @@ const Routes: FunctionComponent = () => {
       <Route path="/blog" component={Blog} />
       <Route path="/vertex" component={() => { window.location.replace("https://rajatpatwari.com/vertex"); return null; }} />
       <Route path="/wundu" component={() => { window.location.replace("https://rajatpatwari.com/wundu"); return null; }} />
+      <Route path="/resume" component={() => { window.location.replace("https://rajatpatwari.com/resume"); return null; }} />
       <Route component={Error} />
     </Switch>
   );
