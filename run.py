@@ -35,7 +35,8 @@ def dockerignore_interactive():
         generate_dockerignore()
 
 def dockercompose_run():
-    subprocess.run([ "docker", "compose", "up", "-d" ])
+    subprocess.run([ "docker-compose", "build", "--no-cache" ])
+    subprocess.run([ "docker-compose", "up", "--no-build", "-d" ])
 
 def dockercompose_interactive():
     dockercomposeRunFeedback = input("Would you like to run the application? [y/n] ")

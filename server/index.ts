@@ -16,7 +16,7 @@ app.use(helmet({
 
 const buildPath = path.join(__dirname, "..", "build");
 app.use(express.static(buildPath));
-app.get("/*", (_, res) => res.send(path.join(buildPath, "index.html")));
+app.get("/*", (_, res) => res.sendFile(path.join(buildPath, "index.html")));
 
 const port = 3000;
 app.listen(port, () => console.log(`Server started on port ${port}...`));
