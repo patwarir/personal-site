@@ -63,7 +63,7 @@ const HistoryTimeline: FunctionComponent = () => {
         <div className="mt-2 mb-0">
           <span className="small text-muted">Platform</span> <Badges items={[ "AWS", "Docker", "NodeJS", "NGINX", "Jest", "TypeScript" ]} />
           <br className="mb-0" />
-          <span className="small text-muted">Backend</span> <Badges items={[ "OpenAPI/Swagger", "Socket.io", "NestJS-Express", "Redis", "PostgreSQL" ]} />
+          <span className="small text-muted">Backend</span> <Badges items={[ "OpenAPI/Swagger", "Socket.io", "Redis", "PostgreSQL", "NestJS-Express" ]} />
           <br className="mb-0" />
           <span className="small text-muted">Frontend</span> <Badges items={[ "ReactJS", "ReduxJS", "SCSS/SASS", "Bootstrap", "Axios" ]} />
 
@@ -77,7 +77,7 @@ const HistoryTimeline: FunctionComponent = () => {
         <p className="text-muted mb-0">Uptake Canada, Inc. - Remote/Mississauga, ON</p>
         <DateRange from="May 2021" to="Aug 2021" />
         <div className="mt-2 mb-0">
-          <span className="small text-muted">Backend</span> <Badges items={[ "ASP.NET", "NestJS-Express", "C#", "TypeScript", "SQL Server" ]} />
+          <span className="small text-muted">Backend</span> <Badges items={[ "ASP.NET", "NestJS-Express", "SQL Server", "C#", "TypeScript" ]} />
           <br className="mb-0" />
           <span className="small text-muted">Frontend</span> <Badges items={[ "ExtJS/Sencha", "JavaScript" ]} />
 
@@ -91,15 +91,15 @@ const HistoryTimeline: FunctionComponent = () => {
       <Item direction="left" icon={faUniversity} iconAligment="align-top-top">
         <h4 className="fw-bold mb-0">Software Engineering</h4>
         <p className="text-muted mb-0">University of Waterloo, ON</p>
-        <DateRange from="Sep 2020" to="Present - Jun 2025" />
+        <DateRange from="Sep 2020" to="Jun 2025" />
       </Item>
       <Item direction="right" icon={faCode} iconAligment="align-top-top">
         <h4 className="fw-bold mb-0">Vertex <Link to="https://rajatpatwari.com/vertex" icon={faLink} /> <Link to="https://gitlab.com/patwarir/vertex" icon={faExternalLinkAlt} /></h4>
         <DateRange from="2019" to="Present" />
         <div className="mt-2 mb-0">
-          <span className="small text-muted">Core</span> <Badges items={[ "C#", ".NET Core", "XUnit" ]} />
+          <span className="small text-muted">Core</span> <Badges items={[ ".NET Core", "C#", "XUnit" ]} />
           <br className="mb-0" />
-          <span className="small text-muted">Online</span> <Badges items={[ "AWS", "Docker", "NodeJS", "NestJS-Express" ]} />
+          <span className="small text-muted">Online</span> <Badges items={[ "AWS", "Docker", "ASP.NET Core", "C#" ]} />
 
           <div className="mb-2"></div>
 
@@ -110,7 +110,7 @@ const HistoryTimeline: FunctionComponent = () => {
         <h4 className="fw-bold mb-0">GridWorld <Link to="https://gitlab.com/patwarir/gridworld" icon={faExternalLinkAlt} /></h4>
         <DateRange from="2018" to="Present" />
         <div className="mt-2 mb-0">
-          <span className="small text-muted">Core</span> <Badges items={[ "WPF", "C#", ".NET Framework" ]} />
+          <span className="small text-muted">Core</span> <Badges items={[ "WPF", ".NET Framework", "C#" ]} />
 
           <div className="mb-2"></div>
 

@@ -4,3 +4,8 @@ Dockerfile
 custom.dockerignore
 
 .dockerignore
+
+# Git
+.git/
+.gitignore
+.gitattributes

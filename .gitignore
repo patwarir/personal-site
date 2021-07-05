@@ -1,3 +1,7 @@
+# Secrets
+[Ss]ecrets/
+.[Ss]ecrets/
+
 # NPM
 node_modules/
 .npm/
@@ -33,7 +37,7 @@ npm-debug.log*
 .vs/
 
 # Docker Ignore
-.[Dd]ockerignore
+.dockerignore
 
 # Python Cache
 __pycache__/
@@ -46,10 +50,13 @@ __pycache__/
 *.log
 
 [Cc]ache/
+.[Cc]ache/
 *.cache
 
 [Tt]mp/
+.[Tt]mp/
 [Tt]emp/
+.[Tt]emp/
 *.tmp
 *.temp
 
