@@ -17,8 +17,11 @@
 
     "noEmit": true,
     "baseUrl": "./src/",
+    "paths": {
+      "@root/*": [ "./*" ]
+    },
     "removeComments": true,
-    "jsx": "react-jsx",
+    "jsx": "preserve",
     "skipLibCheck": false,
 
     "allowUnreachableCode": false,
@@ -41,6 +44,10 @@
     "strictPropertyInitialization": true
   },
   "include": [
+    "./next-env.d.ts",
     "./src/"
+  ],
+  "exclude": [
+    "./node_modules/"
   ]
 }

@@ -1,11 +1,7 @@
 # Secrets
 [Ss]ecrets/
 .[Ss]ecrets/
-
-# NPM
-node_modules/
-.npm/
-npm-debug.log*
+*.pem
 
 # Environment Configuration
 .env.local
@@ -13,8 +9,45 @@ npm-debug.log*
 .env.test.local
 .env.production.local
 
+# Docker Ignore
+.dockerignore
+
+# NPM
+node_modules/
+.npm/
+npm-debug.log*
+
+# Python Cache
+__pycache__/
+
+# VS Code
+.vscode/
+
+# JetBrains IDEs
+.idea/
+
+# Visual Studio
+.vs/
+
+# ESLint
+.eslintcache
+
+# NextJS
+.next/
+
 # Coverage
 [Cc]overage/
+.[Cc]overage/
+
+# Logs
+[Ll]og/
+.[Ll]og/
+*.log
+
+# Cache
+[Cc]ache/
+.[Cc]ache/
+*.cache
 
 # Artifacts
 [Dd]ist/
@@ -26,38 +59,16 @@ npm-debug.log*
 [Bb]in/
 [Oo]bj/
 [Oo]bject/
+[Oo]ut/
 
-# VS Code
-.vscode/
-
-# JetBrains IDEs
-.idea/
-
-# Visual Studio
-.vs/
-
-# Docker Ignore
-.dockerignore
-
-# Python Cache
-__pycache__/
-
-# ESLint
-.eslintcache
-
-# Miscellaneous
-[Ll]og/
-*.log
-
-[Cc]ache/
-.[Cc]ache/
-*.cache
-
+# Temporary
 [Tt]mp/
 .[Tt]mp/
+*.tmp
+
 [Tt]emp/
 .[Tt]emp/
-*.tmp
 *.temp
 
+# Miscellaneous
 .DS_STORE
