@@ -2,8 +2,12 @@ from pathlib import Path
 from os import linesep
 from typing import List
 
+dockerignorePath = "./.dockerignore"
+customDockerignorePath = "./custom.dockerignore"
+gitignorePath = "./.gitignore"
+
 def check_for_dockerignore() -> bool:
-    return Path("./src/site/.dockerignore").exists()
+    return Path(dockerignorePath).exists()
 
 def generate_dockerignore() -> None:
     def process_lines(lines: List[str]) -> List[str]:
@@ -16,9 +20,9 @@ def generate_dockerignore() -> None:
         return return_lines
 
     try:
-        with open("./.gitignore", "r") as gitignoreFile:
+        with open(gitignorePath, "r") as gitignoreFile:
             gitignoreLines = process_lines(gitignoreFile.readlines())
-        with open("./custom.dockerignore", "r") as customDockerignoreFile:
+        with open(customDockerignorePath, "r") as customDockerignoreFile:
             customDockerignoreLines = process_lines(customDockerignoreFile.readlines())
 
         dockerignoreLines: List[str] = []
@@ -26,7 +30,7 @@ def generate_dockerignore() -> None:
         dockerignoreLines.append(linesep)
         dockerignoreLines.extend(gitignoreLines)
 
-        with open("./src/site/.dockerignore", "w") as dockerignoreFile:
+        with open(dockerignorePath, "w") as dockerignoreFile:
             dockerignoreFile.writelines(dockerignoreLines)
 
     except OSError as e:
@@ -34,7 +38,7 @@ def generate_dockerignore() -> None:
 
 def main() -> None:
     if check_for_dockerignore():
-        print("File: \"./src/site/.dockerignore\" already exists!")
+        print("File: \"" + dockerignorePath + "\" already exists!")
         regenerateInput = input("Would you like to regenerate it? [y/n] ")
         if regenerateInput == "y":
             generate_dockerignore()

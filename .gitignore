@@ -12,14 +12,6 @@
 # Docker Ignore
 .dockerignore
 
-# NPM
-node_modules/
-.npm/
-npm-debug.log*
-
-# Python Cache
-__pycache__/
-
 # VS Code
 .vscode/
 
@@ -28,6 +20,24 @@ __pycache__/
 
 # Visual Studio
 .vs/
+
+# Python Cache
+__pycache__/
+
+# NPM
+node_modules/
+.npm/
+npm-debug.log*
+
+# JavaScript Miscellaneous
+.pnp/
+.pnp.js
+.pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# TypeScript
+*.tsbuildinfo
 
 # ESLint
 .eslintcache
