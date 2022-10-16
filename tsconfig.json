@@ -15,16 +15,17 @@
     "checkJs": true,
     "allowSyntheticDefaultImports": true,
     "noEmit": true,
-    "baseUrl": "./src/",
+    "baseUrl": "./",
     "paths": {
       "@root/*": [
-        "./*",
+        "./src/*",
       ],
     },
     "removeComments": true,
     "jsx": "preserve",
     "skipLibCheck": true,
     "incremental": true,
+
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,
     "alwaysStrict": true,
@@ -51,6 +52,6 @@
     "./src/",
   ],
   "exclude": [
-    "./node_modules/"
+    "./node_modules/",
   ],
 }

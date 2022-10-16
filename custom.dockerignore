@@ -2,7 +2,6 @@
 docker-compose.yml
 Dockerfile
 custom.dockerignore
-
 .dockerignore
 
 # Git
