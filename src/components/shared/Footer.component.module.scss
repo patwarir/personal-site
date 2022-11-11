@@ -1,0 +1,13 @@
+@import "@root/variables.global.scss";
+
+@each $name, $value in $footer-separator-colors {
+  .separator-#{$name} {
+    border-color: $value;
+  }
+}
+
+@each $name, $value in $footer-foreground-colors {
+  .fg-#{$name} {
+    color: $value;
+  }
+}

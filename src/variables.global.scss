@@ -1,0 +1,40 @@
+$window-foreground-colors: (
+  "light": oklch(20% 0 0),
+  "dark": oklch(75% 0 0),
+);
+
+$window-background-colors: (
+  "light": oklch(92.5% 0 0),
+  "dark": oklch(20% 0 0),
+);
+
+
+
+$navbar-lead-foreground-colors: (
+  "light": oklch(90% 0 0),
+  "dark": oklch(75% 0 0),
+);
+
+$navbar-foreground-colors: (
+  "light": oklch(85% 0 0),
+  "dark": oklch(70% 0 0),
+);
+
+$navbar-background-colors: (
+  "light": oklch(40% 0.35 250),
+  "dark": oklch(25% 0 0),
+);
+
+$navbar-theme-togger-border-colors: $navbar-foreground-colors;
+
+
+
+$footer-foreground-colors: (
+  "light": oklch(45% 0 0),
+  "dark": oklch(55% 0 0),
+);
+
+$footer-separator-colors: (
+  "light": oklch(55% 0 0),
+  "dark": oklch(50% 0 0),
+);

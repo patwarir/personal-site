@@ -1,0 +1,31 @@
+@import "@root/variables.global.scss";
+
+@each $name, $value in $navbar-lead-foreground-colors {
+  .fg-lead-#{$name} {
+    color: $value;
+  }
+}
+
+@each $name, $value in $navbar-foreground-colors {
+  .fg-#{$name} {
+    color: $value;
+  }
+}
+
+@each $name, $value in $navbar-background-colors {
+  .bg-#{$name} {
+    background-color: $value;
+  }
+}
+
+@each $name, $value in $navbar-lead-foreground-colors {
+  .fg-lead-#{$name} {
+    color: $value;
+  }
+}
+
+@each $name, $value in $navbar-theme-togger-border-colors {
+  .border-theme-togger-#{$name} {
+    border-color: $value;
+  }
+}

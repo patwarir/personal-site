@@ -1,0 +1,13 @@
+@import "@root/variables.global.scss";
+
+@each $name, $value in $window-foreground-colors {
+  .fg-#{$name} {
+    color: $value;
+  }
+}
+
+@each $name, $value in $window-background-colors {
+  .bg-#{$name} {
+    background-color: $value;
+  }
+}
