@@ -7,6 +7,9 @@ const jestConfigObject = {
   moduleNameMapper: {
     "^@root/(.*)$": "<rootDir>/src/$1",
   },
+  roots: [
+    "<rootDir>/src/tests/unit/",
+  ],
   setupFilesAfterEnv: [
     "./jest.setup.js",
   ],
