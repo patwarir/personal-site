@@ -24,20 +24,15 @@ ENV NEXT_TELEMETRY_DISABLED=1
 
 RUN apk update && apk add --no-cache libc6-compat dumb-init
 
-RUN addgroup --system --gid 1001 nodejs
-RUN adduser --system --uid 1001 nextjs
-
-USER nextjs
-
 WORKDIR /personal-site/
 
-COPY --chown=nodejs:nextjs ./package.json ./
-COPY --chown=nodejs:nextjs ./package-lock.json ./
+COPY ./package.json ./
+COPY ./package-lock.json ./
 
-RUN npm ci --only=production --ignore-scripts
+RUN npm ci --omit=dev --ignore-scripts
 
-COPY --chown=nodejs:nextjs --from=builder /personal-site/.next/ ./.next/
-COPY --chown=nodejs:nextjs --from=builder /personal-site/next.config.js ./
+COPY --from=builder /personal-site/.next/ ./.next/
+COPY --from=builder /personal-site/next.config.js ./
 
 EXPOSE 3000
 
