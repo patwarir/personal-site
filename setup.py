@@ -1,6 +1,5 @@
 from pathlib import Path
 from os import linesep
-from typing import List
 
 dockerignorePath = "./.dockerignore"
 customDockerignorePath = "./custom.dockerignore"
@@ -10,10 +9,10 @@ def check_for_dockerignore() -> bool:
     return Path(dockerignorePath).exists()
 
 def generate_dockerignore() -> None:
-    def process_lines(lines: List[str]) -> List[str]:
-        return_lines: List[str] = []
+    def process_lines(lines: list[str]) -> list[str]:
+        return_lines: list[str] = []
         for line in lines:
-            if len(line) > 0 and not line.isspace() and not line.startswith("#"):
+            if len(line) > 0 and not (line.isspace() or line.startswith("#")):
                 return_lines.append("**/" + line)
             else:
                 return_lines.append(line)
@@ -25,7 +24,7 @@ def generate_dockerignore() -> None:
         with open(customDockerignorePath, "r") as customDockerignoreFile:
             customDockerignoreLines = process_lines(customDockerignoreFile.readlines())
 
-        dockerignoreLines: List[str] = []
+        dockerignoreLines: list[str] = []
         dockerignoreLines.extend(customDockerignoreLines)
         dockerignoreLines.append(linesep)
         dockerignoreLines.extend(gitignoreLines)
@@ -39,11 +38,9 @@ def generate_dockerignore() -> None:
 def main() -> None:
     if check_for_dockerignore():
         print("File: \"" + dockerignorePath + "\" already exists!")
-        regenerateInput = input("Would you like to regenerate it? [y/n] ")
+        regenerateInput = input("Would you like to regenerate it? [y/N] ")
         if regenerateInput == "y":
             generate_dockerignore()
-        elif regenerateInput != "n":
-            print("Invalid token!")
     else:
         generate_dockerignore()
 

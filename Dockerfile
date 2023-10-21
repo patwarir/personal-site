@@ -15,8 +15,6 @@ COPY ./ ./
 
 RUN npm run build
 
-
-
 # Runner
 
 FROM node:18-alpine as runner

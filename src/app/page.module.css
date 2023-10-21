@@ -1,0 +1,7 @@
+.btn-bg {
+  background-color: oklch(40.23% 0.152 259.66);
+}
+
+.btn-fg {
+  color: oklch(95% 0 0);
+}

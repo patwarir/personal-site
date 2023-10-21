@@ -5,10 +5,7 @@
 *.key
 
 # Environment
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
+.env*.local
 
 # Visual Studio Code
 .vscode/
@@ -44,6 +41,13 @@ yarn-error.log*
 # NextJS
 .next/
 .swc/
+next-env.d.ts
+
+# Vercel
+.vercel/
+
+# Expo
+.expo/
 
 # Coverage
 [Cc]overage/
@@ -68,6 +72,7 @@ yarn-error.log*
 [Oo]bject/
 [Oo]ut/
 [Pp]kg/
+[Ww]eb-[Bb]uild/
 
 # Cache
 [Cc]ache/

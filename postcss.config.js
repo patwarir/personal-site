@@ -1,20 +1,6 @@
-/** @type { import("postcss").Postcss } */
-const postcssConfig = {
+module.exports = {
   plugins: {
-    "postcss-import": {},
-    "tailwindcss/nesting": {},
-    "tailwindcss": {},
-    "postcss-flexbugs-fixes": {},
-    "postcss-preset-env": {
-      "autoprefixer": {
-        flexbox: "no-2009",
-      },
-      features: {
-        "nesting-rules": false,
-      },
-    },
-    "cssnano": {},
+    tailwindcss: {},
+    autoprefixer: {},
   },
 };
-
-module.exports = postcssConfig;
