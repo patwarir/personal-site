@@ -31,8 +31,8 @@ const Home: FunctionComponent = () => {
             I&apos;m a student at the <FontAwesomeIcon icon={faGraduationCap} /> <span className="italic">University of Waterloo</span>{" "}
             studying <FontAwesomeIcon icon={faCodeBranch} /> <span className="italic">Software Engineering</span> and I&apos;ve been
             interested in programming and software development for over { new Date().getUTCFullYear() - 2016 } years. Over multiple
-            internships, I&apos;ve had the opportunity to be a full-stack web developer focusing on frontend, backend and infrastructure
-            technologies. I also love diving into lower-level systems programming, such as figuring out why something like a compiler
+            internships, I&apos;ve had the opportunity to be a mobile and full-stack web developer focusing on frontend, backend and infrastructure
+            technologies. I also love diving into lower-level systems programming, such as figuring out why a compiler
             works or how operating systems are designed. Please feel free to contact me at <span className="font-mono text-sm">rajatpatwari@gmail.com</span>{" "}
             for any opportunities or questions.
           </p>
