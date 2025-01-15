@@ -1,6 +1,6 @@
 # Builder
 
-FROM node:18-alpine as builder
+FROM node:alpine AS builder
 
 RUN apk update && apk add --no-cache libc6-compat
 
@@ -17,7 +17,7 @@ RUN npm run build
 
 # Runner
 
-FROM node:18-alpine as runner
+FROM node:alpine AS runner
 
 ENV NODE_ENV=production
 ENV NEXT_TELEMETRY_DISABLED=1
@@ -29,7 +29,7 @@ WORKDIR /personal-site/
 COPY ./package.json ./
 COPY ./package-lock.json ./
 
-RUN npm ci --omit=dev --ignore-scripts
+RUN npm ci --omit=dev
 
 COPY --from=builder /personal-site/.next/ ./.next/
 COPY --from=builder /personal-site/next.config.js ./
