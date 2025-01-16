@@ -31,8 +31,9 @@ COPY ./package-lock.json ./
 
 RUN npm ci --omit=dev
 
+COPY --from=builder /personal-site/public ./public
 COPY --from=builder /personal-site/.next/ ./.next/
-COPY --from=builder /personal-site/next.config.js ./
+COPY --from=builder /personal-site/next.config.ts ./
 
 EXPOSE 3000
 
