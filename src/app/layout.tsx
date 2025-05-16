@@ -15,9 +15,11 @@ export const metadata: Metadata = {
 
 const RootLayout: FunctionComponent<PropsWithChildren> = ({ children }) => (
   <html lang="en">
-    <body className="antialiased">
+    <body className="antialiased min-h-screen flex flex-col">
       <Navbar />
-      {children}
+      <div className="mt-4 lg:mt-0 lg:h-[calc(100vh-8rem)] lg:flex lg:justify-center lg:items-center">
+        {children}
+      </div>
     </body>
   </html>
 );

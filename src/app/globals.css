@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 :root {
-  --foreground: oklch(5% 0 0);
-  --background: oklch(87.5% 0.005 250);
+  --foreground: oklch(0% 0 0);
+  --background: oklch(97.5% 0.005 250);
 }
 
 /* @media (prefers-color-scheme: dark) {
