@@ -10,7 +10,7 @@ import "./globals.css";
 FontAwesomeConfig.autoAddCss = false;
 
 export const metadata: Metadata = {
-  title: "Rajat Patwari - Software Engineer",
+  title: "Rajat Patwari - Software Developer",
 };
 
 const RootLayout: FunctionComponent<PropsWithChildren> = ({ children }) => (
